@@ -1,4 +1,4 @@
-package io.kafka.assignor;
+package io.github.guyozeri.kafka.assignor;
 
 import org.apache.kafka.clients.admin.Admin;
 import org.apache.kafka.clients.admin.OffsetSpec;
@@ -15,7 +15,7 @@ import java.util.Map;
 import java.util.concurrent.ScheduledExecutorService;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static io.kafka.assignor.ThroughputWeightProvider.*;
+import static io.github.guyozeri.kafka.assignor.ThroughputWeightProvider.*;
 
 class ThroughputWeightProviderTest {
 

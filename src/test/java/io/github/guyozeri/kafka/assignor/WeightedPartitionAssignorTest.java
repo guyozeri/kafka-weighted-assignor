@@ -1,4 +1,4 @@
-package io.kafka.assignor;
+package io.github.guyozeri.kafka.assignor;
 
 import org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.Subscription;
 import org.apache.kafka.common.TopicPartition;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static io.kafka.assignor.WeightedPartitionAssignor.WEIGHT_PROVIDER_CLASS_CONFIG;
+import static io.github.guyozeri.kafka.assignor.WeightedPartitionAssignor.WEIGHT_PROVIDER_CLASS_CONFIG;
 
 class WeightedPartitionAssignorTest {
 

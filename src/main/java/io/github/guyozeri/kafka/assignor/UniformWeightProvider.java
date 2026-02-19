@@ -1,4 +1,4 @@
-package io.kafka.assignor;
+package io.github.guyozeri.kafka.assignor;
 
 import org.apache.kafka.common.TopicPartition;
 

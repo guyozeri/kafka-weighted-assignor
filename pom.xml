@@ -4,12 +4,34 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.kafka.assignor</groupId>
+    <groupId>io.github.guyozeri.kafka.assignor</groupId>
     <artifactId>kafka-weighted-assignor</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <name>kafka-weighted-assignor</name>
     <description>A Kafka partition assignor that distributes partitions based on configurable weights (e.g. throughput)</description>
+    <url>https://github.com/guyozeri/kafka-weighted-assignor</url>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>guyozeri</id>
+            <name>Guy Ozeri</name>
+            <url>https://github.com/guyozeri</url>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/guyozeri/kafka-weighted-assignor.git</connection>
+        <developerConnection>scm:git:ssh://github.com:guyozeri/kafka-weighted-assignor.git</developerConnection>
+        <url>https://github.com/guyozeri/kafka-weighted-assignor</url>
+    </scm>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -87,5 +109,37 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>3.2.7</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals><goal>sign</goal></goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.sonatype.central</groupId>
+                        <artifactId>central-publishing-maven-plugin</artifactId>
+                        <version>0.6.0</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <publishingServerId>central</publishingServerId>
+                            <autoPublish>true</autoPublish>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
 </project>

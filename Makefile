@@ -1,4 +1,4 @@
-.PHONY: build test unit-test system-test clean package install javadoc
+.PHONY: build test unit-test system-test clean package install javadoc release
 
 build:
 	mvn compile
@@ -23,3 +23,6 @@ install:
 
 javadoc:
 	mvn javadoc:jar
+
+release:
+	mvn clean deploy -Prelease

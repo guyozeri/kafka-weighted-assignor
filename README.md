@@ -25,9 +25,9 @@ Add the dependency (the library requires `kafka-clients` on the classpath):
 
 ```xml
 <dependency>
-    <groupId>io.kafka.assignor</groupId>
+    <groupId>io.github.guyozeri.kafka.assignor</groupId>
     <artifactId>kafka-weighted-assignor</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 </dependency>
 ```
 

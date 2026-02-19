@@ -3,8 +3,8 @@ import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.serialization.StringDeserializer;
-import io.kafka.assignor.ThroughputWeightProvider;
-import io.kafka.assignor.WeightedPartitionAssignor;
+import io.github.guyozeri.kafka.assignor.ThroughputWeightProvider;
+import io.github.guyozeri.kafka.assignor.WeightedPartitionAssignor;
 
 import java.time.Duration;
 import java.util.Collections;
